@@ -1,0 +1,17 @@
+LibTech1 is a fork of Freedoom, a complete
+set of assets for the Doom engine that is
+wholly free and open-source.
+
+Thanks go to all the different artists,
+musicians, level designers and programmers
+who have contributed to Freedoom to allow
+this and other forks to happen.
+
+As with Freedoom, LibTech1 is distributed
+under the terms of the BSD license.
+
+For more information, check out:
+
+    https://libtech1.nfshost.com/
+    https://freedoom.github.io/
+
