@@ -1,0 +1,822 @@
+Patch File for DeHackEd v3.0
+Doom version = 19
+Patch format = 6
+
+# SPDX-License-Identifier: BSD-3-Clause
+
+# The following changes turn on full brightness for a few firing frames,
+# since these they show gun flashes and it looks weird if they aren't full
+# brightness. Doom itself has this problem too but it's more noticeable with
+# the Freedoom sprites.
+
+# Zombie
+Frame 185
+Sprite subnumber = 32773
+
+
+# [LIBTECH1] Make the minigunner use a proper pistol attack.
+Pointer 234 (Frame 417)
+Codep Frame = 185
+
+Pointer 235 (Frame 418)
+Codep Frame = 185
+
+# [LIBTECH1] Same with the sailors.
+Pointer 234 (Frame 738)
+Codep Frame = 185
+
+Pointer 235 (Frame 740)
+Codep Frame = 185
+
+
+# naphil
+Frame 685
+Sprite subnumber = 32773
+
+Frame 687
+Sprite subnumber = 32773
+
+Frame 689
+Sprite subnumber = 32773
+
+
+# [LIBTECH1] ganglion and manticore shouldn't be bright just prepping a shot?
+# Making it a funky effect won't work since it just uses A frame.
+Frame 615
+Sprite subnumber = 0
+
+Frame 647
+Sprite subnumber = 0
+
+
+# [LIBTECH1] make some ganglion death frames fullbright.
+Frame 624
+Sprite subnumber = 32780
+
+Frame 625
+Sprite subnumber = 32781
+
+Frame 626
+Sprite subnumber = 32782
+
+Frame 627
+Sprite subnumber = 32783
+
+
+# The super shotgun's first frame is 7 tics long before it
+# begins its reload sequence, but the muzzle flash animation
+# totals 9 tics, causing the flash to trail behind the gun.
+# This shortens the flash down to exactly 7 tics.
+
+Frame 47
+Duration = 4
+
+Frame 48
+Duration = 3
+
+
+# [LIBTECH1] Swap some fist sprites so the punch happens on full extension
+Frame 5
+Sprite subnumber = 2
+
+Frame 6
+Sprite subnumber = 3
+
+Frame 7
+Sprite subnumber = 2
+
+Frame 8
+Sprite subnumber = 1
+
+Frame 9
+Sprite subnumber = 0
+
+
+# [LIBTECH1] get rid of the fullbrights on the armours and rescue suit.
+Frame 803
+Sprite subnumber = 1
+
+Frame 805
+Sprite subnumber = 1
+
+Frame 861
+Sprite subnumber = 0
+
+# [LIBTECH1] get rid of the fullbrights on the skull keys/mcguffins.
+# If we get too many complaints, swap so each A frame is fullbright instead (32768).
+Frame 835
+Sprite subnumber = 1
+
+Frame 837
+Sprite subnumber = 1
+
+Frame 839
+Sprite subnumber = 1
+
+
+
+# [LIBTECH1] Things 104 and 109 both hang from ceiling and use the same
+# sprite, but 109 (the non-blocking one) is height 52 instead, causing
+# its sprite to clip into the ceiling since the sprite offset is meant
+# for thing 104's correct height of 84.
+# This sets the non-blocker's height to match its counterpart.
+
+Thing 109
+Height = 5505024
+
+
+
+
+# This is a magic comment recognized by Chocolate Doom, so that the
+# BEX [STRINGS] section below will be parsed:
+#
+#   *allow-extended-strings*
+
+[PARS]
+#ifndef FREEDM
+# Par times. The BEX format requires these to be specified in number
+# of seconds, but for convenience we include the min:sec value in a
+# comment. Comment also indicates when the run was done - ideally
+# this should be re-done for every new release. Times are rounded
+# to nearest half-minute.
+#ifdef PHASE1
+#ifdef FREEDEMO
+par  1 1   10  # 00:10
+par  1 2   20  # 00:20
+par  1 3   20  # 00:20
+par  1 4   30  # 00:30
+par  1 5   50  # 00:50
+par  1 6   50  # 00:50
+par  1 7   90  # 01:30
+par  1 8   90  # 01:30
+par  1 9   30  # 00:30
+#else
+par  1 1   60  # 01:00 - apophis for lt1-v0.1 - 2023/03
+par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
+par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
+par  1 4  180  # 03:00 - Voros for v0.12 - 2017/03
+par  1 5   90  # 01:30 - Voros for v0.12 - 2017/03
+par  1 6  390  # 06:30 - Voros for v0.12 - 2017/03
+par  1 7  690  # 11:30 - Voros for v0.12 - 2017/03
+par  1 8   60  # 01:00 - Voros for v0.12 - 2017/03
+par  1 9  240  # 04:00 - apophis for v0.13 - 2023/04
+par  2 1  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 2  150  # 02:30 - Voros for v0.12 - 2017/03
+par  2 3  180  # 03:00 - Voros for v0.12 - 2017/03
+par  2 4  210  # 03:30 - apophis for lt1-v0.1 - 2024/07
+par  2 5  300  # 05:00 - Voros for v0.12 - 2017/03
+par  2 6  150  # 02:30 - Voros for v0.12 - 2017/03
+par  2 7  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 8  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 9  360  # 06:00 - Voros for v0.12 - 2017/03
+par  3 1   30  # 00:30 - Voros for v0.12 - 2017/03
+par  3 2   90  # 01:30 - apophis for lt1-v0.1 - 2024/07
+par  3 3  240  # 04:00 - Voros for v0.12 - 2017/03
+par  3 4  270  # 04:30 - Voros for v0.12 - 2017/03
+par  3 5    0  # 00:00
+par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
+par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
+par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
+par  3 9  570  # 09:30 - Voros for v0.12 - 2017/03
+#endif
+#else
+par  1   30  # 00:30  - Voros for v0.11 - 2017/02
+par  2   90  # 01:30  - Voros for v0.11 - 2017/02
+par  3  120  # 02:00  - Voros for v0.11 - 2017/02
+par  4  120  # 02:00  - Voros for v0.11 - 2017/02
+par  5  150  # 02:30  - Voros for v0.11 - 2017/02
+par  6  90   # 01:30  - Voros for v0.11 - 2017/02
+par  7  150  # 02:30  - Voros for v0.11 - 2017/02
+par  8  330  # 05:30  - Voros for v0.11 - 2017/02
+par  9  150  # 02:30  - Voros for v0.11 - 2017/02
+par 10  120  # 02:00  - Voros for v0.11 - 2017/02
+par 11  420  # 07:00  - Voros for v0.11 - 2017/02
+par 12  630  # 10:30  - Voros for v0.11 - 2017/02
+par 13  180  # 03:00  - Voros for v0.11 - 2017/02
+par 14  150  # 02:30  - Voros for v0.11 - 2017/02
+par 15  510  # 08:30  - Voros for v0.11 - 2017/02
+par 16  120  # 02:00  - Voros for v0.11 - 2017/02
+par 17  120  # 02:00  - Voros for v0.11 - 2017/02
+par 18  180  # 03:00  - Voros for v0.11 - 2017/02
+par 19  210  # 03:30  - Voros for v0.11 - 2017/02
+par 20  420  # 07:00  - Voros for v0.11 - 2017/02
+par 21  330  # 05:30  - Voros for v0.11 - 2017/02
+par 22  420  # 07:00  - Voros for v0.11 - 2017/02
+par 23  240  # 04:00  - Voros for v0.11 - 2017/02
+par 24  420  # 07:00  - Catoptromancy OLD run for v0.7
+par 25  600  # 10:00  - Voros for v0.11 - 2017/02
+par 26  270  # 04:30  - Voros for v0.11 - 2017/02
+par 27  690  # 11:30  - Voros for v0.11 - 2017/02
+par 28  450  # 07:30  - Voros for v0.11 - 2017/02
+par 29  300  # 05:00  - Voros for v0.11 - 2017/02
+par 30   60  # 01:00  - Voros for v0.11 - 2017/02
+par 31   60  # 01:00  - Voros for v0.11 - 2017/02
+par 32  210  # 03:30  - Voros for v0.11 - 2017/02
+#endif
+#else
+# Par times don't matter so much for FreeDM, just set all to zero.
+par  1 0
+par  2 0
+par  3 0
+par  4 0
+par  5 0
+par  6 0
+par  7 0
+par  8 0
+par  9 0
+par 10 0
+par 11 0
+par 12 0
+par 13 0
+par 14 0
+par 15 0
+par 16 0
+par 17 0
+par 18 0
+par 19 0
+par 20 0
+par 21 0
+par 22 0
+par 23 0
+par 24 0
+par 25 0
+par 26 0
+par 27 0
+par 28 0
+par 29 0
+par 30 0
+par 31 0
+par 32 0
+#endif
+
+[STRINGS]
+# Text shown on startup in Boom-compatible ports. This is all in
+# STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+#ifdef FREEDM
+STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
+#else
+STARTUP5============================================================================\nThis is LibTech1, a first person shooter that is freely redistributable\nunder the terms of the modified three-clause BSD licence.\n\nFor more information, check out https://LibTech1.nfshost.com/!\n============================================================================
+#endif
+GOTARMOR = Force field vest.
+GOTMEGA = Attuned force field armour!
+GOTHTHBONUS = Health boosted!
+GOTARMBONUS = Armour boosted!
+GOTSTIM = Took a health refill.
+GOTMEDINEED = Took a large health refill. Never give up!
+GOTMEDIKIT = Took a large health refill.
+GOTSUPER = Ectoplasmic surge!
+GOTBLUECARD = Midnight pass secured!
+GOTYELWCARD = Zenith pass secured!
+GOTREDCARD = Horizon pass secured!
+GOTBLUESKUL = Midnight objective secured: Data tablet.
+GOTYELWSKUL = Zenith objective secured: Psionic lore-stone.
+GOTREDSKULL = Horizon objective secured: Biotic sample.
+GOTINVUL = Vanguard of the gods!
+GOTBERSERK = Rage, arcane symbiote!
+GOTINVIS = Invisibility cloak.
+GOTSUIT = Rescue operations suit.
+GOTMAP = Area survey map.
+GOTVISOR = Low-light goggles.
+GOTMSPHERE = Negentropic surge!
+GOTCLIP = Picked up a bullet clip.
+GOTCLIPBOX = Picked up a case of bullets.
+GOTROCKET = Picked up a missile.
+GOTROCKBOX = Picked up a crate of missiles.
+GOTCELL = Picked up a battery.
+GOTCELLBOX = Picked up a battery bank.
+GOTSHELLS = Picked up some blaster shells.
+GOTSHELLBOX = Picked up a box of blaster shells.
+GOTBACKPACK = A backpack for all your ammo storage needs!
+GOTBFG9000 = Got the Polaris Artifact...
+GOTCHAINGUN = Got a minigun!
+GOTCHAINSAW = Got a ripsaw!
+GOTLAUNCHER = Got a missile launcher!
+GOTPLASMA = Got a polaric energy weapon!
+GOTSHOTGUN = Got a warp blaster!
+GOTSHOTGUN2 = Got a fulminating warp blaster!
+TAG_FIST = fist
+TAG_BFG9000 = Polaris artifact
+TAG_CHAINGUN = minigun
+TAG_CHAINSAW = ripsaw
+TAG_ROCKETLAUNCHER = missile launcher
+TAG_PLASMARIFLE = polaric energy weapon
+TAG_SHOTGUN = warp blaster
+TAG_SUPERSHOTGUN = fulminating warp blaster
+PD_BLUEO = Secure one Midnight objective first.
+PD_REDO = Secure one Horizon objective first.
+PD_YELLOWO = Secure one Zenith objective first.
+PD_BLUEK = Secure one Midnight objective first.
+PD_REDK = Secure one Horizon objective first.
+PD_YELLOWK = Secure one Zenith objective first.
+PD_BLUEC = Midnight passcard needed.
+PD_REDC = Horizon passcard needed.
+PD_YELLOWC = Zenith passcard needed.
+PD_BLUES = Secure the Midnight objective first.
+PD_REDS = Secure the Horizon objective first.
+PD_YELLOWS = Secure the Zenith objective first.
+PD_ANY = Any key will open this door.
+PD_ALL3 = This door requires all three keys.
+PD_ALL6 = This door requires all six keys!
+HUSTR_E1M1 = E1M1: Outer Prison
+HUSTR_E1M2 = E1M2: Communications Center
+HUSTR_E1M3 = E1M3: Waste Disposal
+HUSTR_E1M4 = E1M4: Supply Depot
+HUSTR_E1M5 = E1M5: Armory
+HUSTR_E1M6 = E1M6: Training Facility
+HUSTR_E1M7 = E1M7: Paraphysical Materials Lab
+HUSTR_E1M8 = E1M8: Outpost Quarry
+HUSTR_E1M9 = E1M9: Nutrient Recycling
+HUSTR_E2M1 = E2M1: Elemental Gate
+HUSTR_E2M2 = E2M2: Shifter
+HUSTR_E2M3 = E2M3: Reclaimed Facilities
+HUSTR_E2M4 = E2M4: Flooded Installation
+HUSTR_E2M5 = E2M5: Underground Hub
+HUSTR_E2M6 = E2M6: Hidden Sector
+HUSTR_E2M7 = E2M7: Control Complex
+HUSTR_E2M8 = E2M8: Starport
+HUSTR_E2M9 = E2M9: Fortress 31
+HUSTR_E3M1 = E3M1: Land of the Lost
+HUSTR_E3M2 = E3M2: Geothermal Relay
+HUSTR_E3M3 = E3M3: Sacrificial Bastion
+HUSTR_E3M4 = E3M4: Oblation Temple
+HUSTR_E3M5 = E3M5: Infernal Hallows
+HUSTR_E3M6 = E3M6: Igneous Intrusion
+HUSTR_E3M7 = E3M7: No Regrets
+HUSTR_E3M8 = E3M8: Star-Crossed
+HUSTR_E3M9 = E3M9: Acquainted With Grief
+HUSTR_E4M1 = E4M1: Maintenance Area
+HUSTR_E4M2 = E4M2: Research Complex
+HUSTR_E4M3 = E4M3: Central Computing
+HUSTR_E4M4 = E4M4: Hydroponic Facility
+HUSTR_E4M5 = E4M5: Engineering Station
+HUSTR_E4M6 = E4M6: Command Center
+HUSTR_E4M7 = E4M7: Waste Treatment
+HUSTR_E4M8 = E4M8: Launch Bay
+HUSTR_E4M9 = E4M9: Operations
+CC_ZOMBIE = goon
+CC_SHOTGUN = henchman
+CC_HEAVY = stormtrooper
+CC_IMP = serpentipede
+CC_DEMON = flesh worm
+CC_LOST = hatchling
+CC_CACO = trilobite
+CC_HELL = pain lord
+CC_BARON = golden pain lord
+CC_ARACH = manticore
+CC_PAIN = matribite
+CC_REVEN = octaminator
+CC_MANCU = chimera
+CC_ARCH = necromancer
+CC_SPIDER = warp ganglion
+CC_CYBER = naphil
+CC_HERO = escaped convict
+#ifdef FREEDM
+HUSTR_1 = DM01: Tech Test
+HUSTR_2 = DM02: Natural Station
+HUSTR_3 = DM03: Issues of Claveria
+HUSTR_4 = DM04: Steel
+HUSTR_5 = DM05: Dense Fields
+HUSTR_6 = DM06: Temple of Ammon
+HUSTR_7 = DM07: Main Stronghold
+HUSTR_8 = DM08: Artifact Base
+HUSTR_9 = DM09: Industrial Outland
+HUSTR_10 = DM10: Detached Grounds
+HUSTR_11 = DM11: Isolated Facility
+HUSTR_12 = DM12: Up 'n' Down Canyon
+HUSTR_13 = DM13: Unholy Blood
+HUSTR_14 = DM14: Technical Assault
+HUSTR_15 = DM15: Shallow Complex
+HUSTR_16 = DM16: Barren Alleys
+HUSTR_17 = DM17: Underwoods
+HUSTR_18 = DM18: Deserted Courtyard
+HUSTR_19 = DM19: Tech Isle
+HUSTR_20 = DM20: Warehouse
+HUSTR_21 = DM21: Refinery
+HUSTR_22 = DM22: Military depot
+HUSTR_23 = DM23: Confrontation
+HUSTR_24 = DM24: Flooded Base
+HUSTR_25 = DM25: Mansion Yard
+HUSTR_26 = DM26: Acidic Crypt
+HUSTR_27 = DM27: The Exile
+HUSTR_28 = DM28: Weapons Factory
+HUSTR_29 = DM29: Unusual Territory
+HUSTR_30 = DM30: Last Man Standing
+HUSTR_31 = DM31: Desolated Fort
+HUSTR_32 = DM32: Fourplay
+#else
+HUSTR_1 = MAP01: Hydroelectric Plant
+HUSTR_2 = MAP02: Filtration Tunnels
+HUSTR_3 = MAP03: Crude Processing Center
+HUSTR_4 = MAP04: Containment Bay
+HUSTR_5 = MAP05: Water Basin
+HUSTR_6 = MAP06: Janus Terminal
+HUSTR_7 = MAP07: Logic Gate
+HUSTR_8 = MAP08: Astronomy Complex
+HUSTR_9 = MAP09: Datacenter
+HUSTR_10 = MAP10: Deadly Outlands
+HUSTR_11 = MAP11: Dimensional Rift Observatory
+HUSTR_12 = MAP12: Railroads
+HUSTR_13 = MAP13: Station Earth
+HUSTR_14 = MAP14: Nuclear Zone
+HUSTR_15 = MAP15: Hostile Takeover
+HUSTR_16 = MAP16: Urban Jungle
+HUSTR_17 = MAP17: Capitol
+HUSTR_18 = MAP18: Aquatics Lab
+HUSTR_19 = MAP19: Sewage Control
+HUSTR_20 = MAP20: Blood Ember Fortress
+HUSTR_21 = MAP21: The Under-Realm
+HUSTR_22 = MAP22: Lava Canyon
+HUSTR_23 = MAP23: Underground Facility
+HUSTR_24 = MAP24: Abandoned Teleporter Lab
+HUSTR_25 = MAP25: Red Works
+HUSTR_26 = MAP26: Dark Depths
+HUSTR_27 = MAP27: Palace of Red
+HUSTR_28 = MAP28: Grim Redoubt
+HUSTR_29 = MAP29: The Lake of Fire
+HUSTR_30 = MAP30: Father of Dreams
+HUSTR_31 = MAP31: Be Quiet
+HUSTR_32 = MAP32: Be Quick
+#endif
+# Final Doom level strings, left blank
+PHUSTR_1 = MAP01
+PHUSTR_2 = MAP02
+PHUSTR_3 = MAP03
+PHUSTR_4 = MAP04
+PHUSTR_5 = MAP05
+PHUSTR_6 = MAP06
+PHUSTR_7 = MAP07
+PHUSTR_8 = MAP08
+PHUSTR_9 = MAP09
+PHUSTR_10 = MAP10
+PHUSTR_11 = MAP11
+PHUSTR_12 = MAP12
+PHUSTR_13 = MAP13
+PHUSTR_14 = MAP14
+PHUSTR_15 = MAP15
+PHUSTR_16 = MAP16
+PHUSTR_17 = MAP17
+PHUSTR_18 = MAP18
+PHUSTR_19 = MAP19
+PHUSTR_20 = MAP20
+PHUSTR_21 = MAP21
+PHUSTR_22 = MAP22
+PHUSTR_23 = MAP23
+PHUSTR_24 = MAP24
+PHUSTR_25 = MAP25
+PHUSTR_26 = MAP26
+PHUSTR_27 = MAP27
+PHUSTR_28 = MAP28
+PHUSTR_29 = MAP29
+PHUSTR_30 = MAP30
+PHUSTR_31 = MAP31
+PHUSTR_32 = MAP32
+THUSTR_1 = MAP01
+THUSTR_2 = MAP02
+THUSTR_3 = MAP03
+THUSTR_4 = MAP04
+THUSTR_5 = MAP05
+THUSTR_6 = MAP06
+THUSTR_7 = MAP07
+THUSTR_8 = MAP08
+THUSTR_9 = MAP09
+THUSTR_10 = MAP10
+THUSTR_11 = MAP11
+THUSTR_12 = MAP12
+THUSTR_13 = MAP13
+THUSTR_14 = MAP14
+THUSTR_15 = MAP15
+THUSTR_16 = MAP16
+THUSTR_17 = MAP17
+THUSTR_18 = MAP18
+THUSTR_19 = MAP19
+THUSTR_20 = MAP20
+THUSTR_21 = MAP21
+THUSTR_22 = MAP22
+THUSTR_23 = MAP23
+THUSTR_24 = MAP24
+THUSTR_25 = MAP25
+THUSTR_26 = MAP26
+THUSTR_27 = MAP27
+THUSTR_28 = MAP28
+THUSTR_29 = MAP29
+THUSTR_30 = MAP30
+THUSTR_31 = MAP31
+THUSTR_32 = MAP32
+HUSTR_PLRGREEN = g:
+HUSTR_PLRINDIGO = i:
+HUSTR_PLRBROWN = b:
+HUSTR_PLRRED = r:
+AMSTR_FOLLOWON = Map follow on.
+AMSTR_FOLLOWOFF = Map follow off.
+AMSTR_GRIDON = Map grid on.
+AMSTR_GRIDOFF = Map grid off.
+AMSTR_MARKEDSPOT = Map mark added.
+AMSTR_MARKSCLEARED = Map marks cleared.
+STSTR_MUS = Music changed.
+STSTR_NOMUS = Error: Music track number not recognized.
+STSTR_DQDON = God mode on.
+STSTR_DQDOFF = God mode off.
+STSTR_KFAADDED = Keys! Weapons! Max ammo!!!
+STSTR_FAADDED = Weapons! Max ammo! Fuck the keys!!!
+STSTR_NCON = Noclip on.
+STSTR_NCOFF = Noclip off.
+STSTR_CHOPPERS = See. Saw. Conquer.
+STSTR_BEHOLD = vanguard, symb, invis, rescue, area or light?
+NIGHTMARE = The game is not designed to be\n\
+            beatable at this skill setting.\n\n\
+            Not recommended unless you're\n\
+            really that good - or bored.\n\n\
+            (Press Y to confirm)
+# End-of-episode texts, now with a consistent story. Feel free to edit them.
+#ifdef FREEDEMO
+E1TEXT = Figures your first big trip in years would\n\
+         land you in jail. You attorn to neither\n\
+         AGM's nor the Pain Lords' jurisdiction.\n\n\
+         The worm you upload onto their system\n\
+         broadcasts their positions to planetary\n\
+         defence; they'll take care of the rest.\n\
+         The trip home is long and uneventful.\n\n\
+         It all seems so familiar. The outpost had\n\
+         the same sorts of buildings, even the same\n\
+         names for them on their signs. Really\n\
+         makes you think about that other time. .  .\n\n\
+         (For the full length LibTech1 campaigns,\n\
+         check out libtech1.nfshost.com!)
+#else
+E1TEXT = Everybody you've known these seven years\n\
+         is dead, missing, or irretrievably lost to\n\
+         whatever indoctrination was being fed into\n\
+         their neural implants by AGM's new owner.\n\n\
+         But at least you're out of that prison.\n\n\
+         The air is hot and muggy, and smells of\n\
+         strange, intoxicating vegetation. You see\n\
+         what looks like old AGM corpo tech patched\n\
+         onto overgrown Second Pain Empire ruins.\n\
+         Nothing close to the tech needed for this\n\
+         existed at the outpost, meaning there must\n\
+         be a starport nearby. To Earth. To freedom.\n\n\
+         Now to actually get there...
+#endif
+E2TEXT = The treacherous guardians at last lie still,\n\
+         bloody machinery falling apart bit by bit.\n\n\
+         The starport is yours.\n\n\
+		 The launch pad, however, holds no ship -\n\
+		 just one single enormous teleporter.\n\
+         Limited inorganics. Fixed destination.\n\n\
+         The name suggests it's probably the new\n\
+         AGM ship hub in this remote star cluster.\n\
+         Bastards owe you for what they've done,\n\
+         so what even is interstellar piracy but\n\
+         some much-needed D.I.Y. law enforcement?\n\n\
+         You board the platform and fade away.\n\
+         Next stop: Horizon.
+E3TEXT = Turns out "Horizon" is a whole new planet.\n\
+         The outpost logs are a bit-rotted mishmash\n\
+         of Old Church Painscript and Trilobish, but\n\
+         you still get some sense of how the neural\n\
+         indoctrination connects with all this crap\n\
+         with the cloning vats and human sacrifices.\n\n\
+         This hyperspace relay would be perfect for\n\
+         getting your findings to Earth - if you\n\
+         hadn't just destroyed its warp ganglion.\n\
+         The relay beam is now permanently stuck on\n\
+         the old Double Impact logistics hub.\n\n\
+         No way out but through, but at least there's\n\
+         probably a ship on the other side...
+E4TEXT = Suppressing fire echoes above as the last\n\
+         survivors flee the ship. The launch process\n\
+         is irreversible and you've got full control\n\
+         over life support, so continuing the attack\n\
+         would be suicide. Soon you are alone.\n\n\
+         Fifty-nine. Fifty-eight. Fifty-seven. .  .\n\
+         You melt into the pilot's seat, lost in the\n\
+         voice of an automated assembly of angels\n\
+         delivering you from this wretched rock.\n\n\
+         The ship rumbles as she wakes up;\n\
+         you think of home as she lifts off.\n\
+         You'll need a new name and identity, but for\n\
+         now you just pop open a synthwine packet:\n\n\
+         To victory! To freedom! To Earth!
+#ifndef FREEDM
+# After MAP06, before MAP07:
+C1TEXT = It's obvious in hindsight that Earth would\n\
+         be at the epicenter of American Galactic\n\
+         Ministries' brain-box shenanigans.\n\n\
+         The survivors you've made contact with\n\
+         have retreated beyond teleporter range,\n\
+         but they give you all the info they can\n\
+         on AGM's indoctrination feed network.\n\n\
+         You boot up the teleporter pad and watch\n\
+         it connect to your first big target.\n\n\
+         Planted your feet.\n\
+         Checked your weapons.\n\n\
+         Time to shut them down.
+# After MAP11, before MAP12:
+C2TEXT = The escapees keep bickering on the comms\n\
+         over where to strike next and exactly what\n\
+         AGM was doing to cause all this - and which\n\
+         escapee faction is doing the same now.\n\
+         The research findings you forward to them\n\
+         only seem to stir up more petty drama.\n\n\
+         You pick their next target for them: a\n\
+         trainyard carrying all sorts of anonymous\n\
+         materials to the gate hub in Capitol City.\n\
+         A lot of which just happens to originate\n\
+         from the rift observatory you're at now.\n\n\
+         It's nice to travel oldschool sometimes.
+# After MAP20, before MAP21:
+C3TEXT = You don't remember what un-zombified\n\
+         people look like anymore. The days blur,\n\
+         sleeping in old ruins and eating scraps.\n\n\
+         But you are getting closer to someone.\n\n\
+         AGM records confirm old serpentipede tales\n\
+         of monstrous entitites worming their way\n\
+         through interstellar teleporter networks,\n\
+         collecting armies of brain-scrambled\n\
+         ex-sapients to conquer all known space.\n\n\
+         And now you're going to meet one - and put\n\
+         a missile or five through its braincase.\n\n\
+         This could be the beginning of your freedom.\n\
+         This could be the beginning of your doom.
+# After MAP30 (endgame text):
+C4TEXT = The old corruptor becomes unstable.\n\
+         His final roar echoes through the cavern\n\
+         until there is only charred scrap metal.\n\n\
+         The targeting portal resets, blissfully\n\
+         unaware of its master's demise.\n\n\
+         On the other side you see a small town.\n\
+         You ditch your comms and slip through,\n\
+         leaving AGM and all its horrors behind.\n\n\
+         No one will know who saved them.\n\n\
+         No one will know what happened here.\n\n\
+         No one will ever find you again.
+# Before MAP31 (secret level #1):
+C5TEXT = You step into the teleporter. You feel a\n\
+         familiar flash, and... you're in a cage?\n\
+         Jailed?\n\n\
+         There are other cages in here. Occupied.\n\
+         They don't seem like they'll be friendly;\n\
+         if anything, they look like they'd take\n\
+         the side of the guards if you escaped.\n\n\
+         None of them have noticed you - yet.\n\
+         Any noise could mean death or worse.\n\n\
+         When the implant breaks you, are you still\n\
+         conscious after, trapped doing things you\n\
+         know are wrong but can't stop?\n\n\
+         You'd rather not find out.
+# Before MAP32 (secret level #2):
+C6TEXT = Forcibly uncaged again. Good job.\n\n\
+         But where are you? The air and gravity\n\
+         still feel like whatever planet\n\
+         that strange prison had been on.\n\n\
+         You look around and the layout triggers\n\
+         some old memories from history class.\n\n\
+         This is an arena.\n\
+         Where they send prisoners to die.\n\
+         That wasn't an exit - but an entrance.\n\n\
+         You will find your way back to the city,\n\
+         but it will have to be on the other side\n\
+         of a few homicidal zombies...
+#else
+# After MAP06, before MAP07:
+C1TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP11, before MAP12:
+C2TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP20, before MAP21:
+C3TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP30 (endgame text):
+C4TEXT = Thank you for playing FreeDM, the\n\
+         Freedoom deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP31 (secret level #1):
+C5TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP32 (secret level #2):
+C6TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+#endif
+#ifdef FREEDEMO
+BGFLATE1 = RROCK03
+#else
+BGFLATE1 = AQF070
+#endif
+BGFLATE2 = FLOOR5_1
+BGFLATE3 = RROCK04
+BGFLATE4 = AQF019
+BGFLAT06 = MFLR8_4
+BGFLAT11 = RROCK18
+BGFLAT20 = GATE4
+BGFLAT30 = RROCK07
+BGFLAT15 = CEIL1_2
+BGFLAT31 = DEM1_6
+# Obituary texts, for ports that use them.
+OB_STEALTHBABY = %o thought %g saw a manticore.
+OB_STEALTHVILE = %o thought %g saw a necromancer.
+OB_STEALTHBARON = %o thought %g saw a pain lord.
+OB_STEALTHCACO = %o thought %g saw a trilobite.
+OB_STEALTHCHAINGUY = %o thought %g saw a stormtrooper.
+OB_STEALTHDEMON = %o thought %g saw a flesh worm.
+OB_STEALTHKNIGHT = %o thought %g saw a pain lord.
+OB_STEALTHIMP = %o thought %g saw a serpentipede.
+OB_STEALTHFATSO = %o thought %g saw a chimera.
+OB_STEALTHUNDEAD = %o thought %g saw an octaminator.
+OB_STEALTHSHOTGUY = %o thought %g saw a henchman.
+OB_STEALTHZOMBIE = %o thought %g saw a goon.
+OB_UNDEADHIT = %o was beaten up by an octaminator.
+OB_IMPHIT = %o was lacerated by a serpentipede.
+OB_CACOHIT = %o got trilo-bitten.
+OB_DEMONHIT = %o was eaten by a flesh worm.
+OB_SPECTREHIT = %o was eaten by a ghost worm.
+OB_BARONHIT = %o was embraced, extended and extinguished by a golden pain lord.
+OB_KNIGHTHIT = %o was slapped by a pain lord.
+OB_ZOMBIE = %o was killed by a goon.
+OB_SHOTGUY = %o was warped by a henchman.
+OB_VILE = %o was raised by a necromancer.
+OB_UNDEAD = %o couldn't evade an octaminator's fireball.
+OB_FATSO = %o was incinerated by a chimera.
+OB_CHAINGUY = %o was sprayed by a stormtrooper.
+OB_SKULL = %o was slammed by a hatchling.
+OB_IMP = %o was scorched by a serpentipede.
+OB_CACO = %o was zapped by a trilobite.
+OB_BARON = %o was evangelized by a golden pain lord.
+OB_KNIGHT = %o was proselytized by a pain lord.
+OB_SPIDER = %o was warped by a ganglion.
+OB_BABY = %o was ionized by a manticore.
+OB_CYBORG = %o was exploded by a naphil.
+OB_WOLFSS = %o was ventilated by a sailor.
+OB_MPFIST = %o was beaten up by %k.
+OB_MPCHAINSAW = %o was shredded by %k's ripsaw.
+OB_MPPISTOL = %o was killed by %k's handgun.
+OB_MPSHOTGUN = %o was warped by %k's blaster.
+OB_MPSSHOTGUN = %o was fulminated by %k's blaster.
+OB_MPCHAINGUN = %o was sprayed by %k's minigun.
+OB_MPROCKET = %o was exploded by %k's missile.
+OB_MPR_SPLASH = %o couldn't dodge %k's missile.
+OB_MPPLASMARIFLE = %o was ionized by %k's polaric energy weapon.
+OB_MPBFG_BOOM = %o took a direct hit from %k's Polaris!
+OB_MPBFG_SPLASH = %o was irradiated by %k's Polaris!
+OB_MPTELEFRAG = %o was multidimensionally displaced by %k.
+OB_RAILGUN = %o was sniped by %k's railgun.
+OB_MPBFG_MBF = %o was shredded by %k's Polaris!
+# Quit messages.
+DOSY = (Press Y to exit the program.)
+QUITMSG = AGM's investors are planning\nan even worse nightmare.\nPress Y to let the corpos win.
+QUITMSG1 = Exiting? You should be glad your\nsourceport lets you read this!
+QUITMSG2 = 99 percent of all players quit\njust before they set a new speedrun record.
+QUITMSG3 = Press Y to surrender.
+QUITMSG4 = I wouldn't press Y if I were you.\nSocial media is much worse.
+QUITMSG5 = It's so over.
+QUITMSG6 = If you give up, this fight will never end.\nPress N if you love freedom.
+QUITMSG7 = They'll never rest. Will you?
+QUITMSG8 = Are you listening to me!?\nWhat do you want to do with your life!?
+QUITMSG9 = Don't press Y!\nThere's an army of monsters on your desktop!
+QUITMSG10 = Thanks for playing! Remember to report bugs\nto https://codeberg.org/mc776/LibTech1!
+QUITMSG11 = Press Y to let AGM decimate\nEarth with their monstrosities.
+QUITMSG12 = Don't quit! Monsters will\neat you while you sleep.
+QUITMSG13 = Do you think you can\nwalk away just like that?
+QUITMSG14 = But I made this fireball just for you!
+
+# Episodes and Difficulty.
+SKILL_BABY = Learning the Controls
+SKILL_EASY = Business Casual
+SKILL_NORMAL = Free to Play
+SKILL_HARD = No Holds Barred
+SKILL_NIGHTMARE = Obsessed
+TXT_D1E1 = Outpost Outbreak
+TXT_D1E2 = Ruin Upon Ruin
+TXT_D1E3 = Event Horizon
+TXT_D1E4 = Double Impact
+TXT_D2E1 = Phase II: Judgment
+TXT_D1ED = Demonstration of Power
+
+#ifdef PHASE1
+# Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
+# IDSPISPOPD is swapped into the slot normally for Phase 2, in case of
+# engines that would otherwise try to apply the cheat twice.
+
+# [LIBTECH1] It's shortened to IDSPIS to circumvent a warning message.
+
+Cheat 0
+No Clipping 1 = idclip
+No Clipping 2 = idspis
+#endif
