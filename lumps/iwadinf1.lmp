@@ -1,0 +1,8 @@
+IWad{
+	Name = "LibTech1 Phase 1"
+	AutoName = "LibTech1"
+	Game = "Doom"
+	Config = "Doom"
+	BannerColors = "ff fa f0", "aa 20 80"
+	Mapinfo = "mapinfo/doom1.txt"
+}

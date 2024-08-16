@@ -1,0 +1,6 @@
+//removes the other episodes from the new game menu in GZDoom.
+clearepisodes
+episode e1m1{
+	picname = "M_EPI1"
+	name = "$TXT_D1E1"
+}
