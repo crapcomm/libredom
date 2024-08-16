@@ -1,0 +1,18 @@
+# libredom
+
+libredom is a free set of core game assets (levels, graphics, sounds, etc.) to
+be used with a https://doomwiki.org/wiki/Source_port[Doom source port].
+It is a fork of the https://freedoom.github.io/[Freedoom] project.
+
+
+## Contributing to libredom
+
+As a personal project libredom is not accepting unsolicited submissions.
+Please inquire with the upstream Freedoom community if there may be any
+assets that need updating or replacing.
+
+Please do, however, feel free to post an issue about any bugs or glitches - 
+typoes, crashes, softlocks, PWADs that don't load, copyright infringements, 
+graphical anomalies, ableist rhetoric, broken game balance, etc..
+
+

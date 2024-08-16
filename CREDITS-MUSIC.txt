@@ -1,0 +1,213 @@
+--Phase 1--
+
+Title: "Fight for Freedom" by Korp, based on "Fountain Dance" by Tyler "Picklehammer" P.
+Intermission: "Fountain Dance" by Tyler "Picklehammer" P., modified by apophis
+Victory: "YOU LIVE!!!!" by Stratos
+Bunny: "Sweet Little Dead Planet" by Goji
+
+Episode 1 - Outpost Outbreak
+	E1M1: "Stanky Leg Specialist" by Lola "BlueWorrior" Harvey
+	E1M2: "Look At Me I'm Underhalls Too" by Mark "TheMisterCat" McGill-Smith
+	E1M3: "Alone with Colors" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
+		E1M9: "Hidden Between Spades" by Korp, a remix of dave3d42.mid by jute
+	E1M4: "Flood the City" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
+	E1M5: e1m1.mid by Ralph "Ralphis" Vickers
+	E1M6: "Oxidine" by Korp, remix of dave3d35.mid by jute
+	E1M7: "Derelict" by continuum.mid
+	E1M8: "On the Next Day" by Kevin "Velvetic" Martins
+
+Episode 2 - Ruin Upon Ruin
+	E2M1: "Neat" by Ralph "Ralphis" Vickers
+	E2M2: "Shoot 'em All" by rostuhan
+	E2M3: "Music for Freedoom 10" by Jeremy "Vandalorian" Emerson
+	E2M4: "Let 'em Burn" by Kevin "Velvetic" Martins
+	E2M5: "Liminal Space" by Lola "BlueWorrior" Harvey
+		E2M9: "The Syntax of Time" by Kevin "Velvetic" Martins
+	E2M6: "SevenFour" by Ralph "Ralphis" Vickers
+	E2M7: "Untitled Jam" by Ralph "Ralphis" Vickers
+	E2M8: "Pit" by Anthony "Ajanddino" Pierce
+
+Episode 3 - Event Horizon
+	E3M1: "Nightstorm" by Korp
+	E3M2: "The Long Road" by Lola "BlueWorrior" Harvey
+	E3M3: "Wrought Havoc" by Lola "BlueWorrior" Harvey
+	E3M4: "Cautious Progress" by Lola "BlueWorrior" Harvey
+	E3M5: "Scorned by Flesh" by Lola "BlueWorrior" Harvey
+	E3M6: "Soul Banisher" by Lola "BlueWorrior" Harvey
+		E3M9: "No-Clip to the End" by Lola "BlueWorrior" Harvey
+	E3M7: "Ultamatum Infurnus" by Lola "BlueWorrior" Harvey
+	E3M8: "The Zenith" by Lola "BlueWorrior" Harvey
+
+Episode 4 - Double Impact
+	E4M1: "Liberate the Stars" by continuum.mid
+	E4M2: "Fight Harder... To Obtain a Better Victory!" by Proxy-MIDI
+		E4M9: "The Deepest Secrets" by continuum.mid
+	E4M3: "Space Spectre" by Matzu
+	E4M4: "Deliberate Concealment" by continuum.mid
+	E4M5: "Main Code" by Korp
+	E4M6: "Andromeda" by ZeMystic
+	E4M7: "Ambiguity" by Korp
+	E4M8: "Vs. The Assault Quindecapod" by continuum.mid
+
+
+--Phase 2--
+
+Title: "Horizon's Call" by Korp
+Intermission: "FTW You 100" by Lola "BlueWorrior" Harvey
+Story: "Ribcage" by Korp
+
+Cluster 1
+	Map01: "Not My First Rodeo..." by Lola "BlueWorrior" Harvey
+	Map02: "Dark Underworld" by Lola "BlueWorrior" Harvey
+	Map03: "Demon Dance" by Discoholic
+	Map04: "Indigo" by Korp
+	Map05: "Under Maintenance" by Lola "BlueWorrior" Harvey
+	Map06: "Dark Trail" by Tyler "Picklehammer" P.
+	Map07: "Moonstone" by Korp
+	Map08: "Syntax Error" by Lola "BlueWorrior" Harvey
+	Map09: "Terrible Secrets" by Lola "BlueWorrior" Harvey
+	Map10: "Soviet Porno" by Jeremy "Vandalorian" Emerson
+	Map11: "Inside the Ruins" by Korp
+
+Cluster 2
+	Map12: "Sewers" by Discoholic, remix of "Wasteland Scavengers" by Samuel "Blastfrog" Oliver
+	Map13: "Fear" by Discoholic
+	Map14: "About the Summer" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
+	Map15: "Backpack of Shells" by Lola "BlueWorrior" Harvey
+		Map31: "Lipstick" by Jeremy "Vandalorian" Emerson
+			Map32: "The Machine" by Lola "BlueWorrior" Harvey
+	Map16: "Reflection" by Scragadelic
+	Map17: "Mow Them Down!" by Lola "BlueWorrior" Harvey
+	Map18: "Realistic Approach" by Kevin "Velvetic" Martins
+	Map19: "Burn the Bodies" by Tyler "Picklehammer" P.
+	Map20: "Totally Surrounded" by Josephus "DH4050" Astartes
+
+Cluster 3
+	Map21: "Diodine" by Korp
+	Map22: "Descent From Grace" by Lola "BlueWorrior" Harvey
+	Map23: "Paranoia" by Tyler "Picklehammer" P.
+	Map24: "Balancing Act" by Andrew Bassett
+	Map25: "I Sought Wisdom in the Chalice But There Was None" by Jeremy "Vandalorian" Emerson
+	Map26: "Black Mountain" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
+	Map27: "Dreamcatcher (Black and Blue)" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
+	Map28: "Skull Underfoot" by Lola "BlueWorrior" Harvey
+	Map29: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
+	Map30: "Warpath" by Tyler "Picklehammer" P.
+
+
+--Demo Version--
+
+Title: "I Hate Fredrik Johansson" by Toby "Tobester" Collins Jr.
+Intermission: "Fountain Dance" by Tyler "Picklehammer" P., modified by apophis
+Victory: "YOU LIVE!!!!" by Stratos
+
+Demo Episode - Demonstration of Power
+	demomap1: "On the Next Day" by Kevin "Velvetic" Martins
+	demomap2: dave3d07.mid by jute
+	demomap3: "Reflection" by Scragadelic
+		demomap9: "Death's Embrace" by Tyler "Picklehammer" P.
+	demomap4: "The Heroic Battle" by Tyler "Picklehammer" P.
+	demomap5: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle
+	demomap6: "Ominous Theme" by Jared "BlackJar72" Blackburn
+	demomap7: "Derelict" by continuum.mid
+	demomap8: "Mists Over the Mire" by Tyler "Picklehammer" P.
+
+
+--FreeDM--
+
+Title: (same as Phase 2)
+Intermission: (same as Phase 2)
+Story: (same as Phase 2)
+	DM01: "Zero Fort" by Ralph "Ralphis" Vickers
+	DM02: "Untitled Jam" by Ralph "Ralphis" Vickers
+	DM03: "Dynamite!" by Korp
+	DM04: "Rush" by Kevin "Velvetic" Martins and Simone Alauk
+	DM05: "Riders of Hell" by Tyler "Picklehammer" P., modified by apophis
+	DM06: "Workout" by Korp
+	DM07: "I Fell Off The Stairs" by Korp
+	DM08: "Jump Is Not Allowed!" by Korp
+
+	DM09: "Method to My Madness" by Matias "jupiter_ex" Roldan
+	DM10: Doom1.mid by Bradley "BobFromReboot" Lavigne
+	DM11: "Spamhambled In Space" by Mark "TheMisterCat" McGill-Smith
+	DM12: "Parallax" by Korp
+	DM13: "Shut It" by Korp
+	DM14: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
+	DM15: "Neat" by Ralph "Ralphis" Vickers
+	DM16: "Deathmatch Construct" by Korp
+
+	DM17: "Surrounded Panic" by Vincent "Vicious" Fong
+	DM18: "Metadata" by Korp
+	DM19: "Tap Water" by Korp
+	DM20: "Quirkspitter" by Korp
+	DM21: "Friendly Fire" by Korp
+	DM22: "Red Foot" by Kevin "Velvetic" Martins and Simone Alauk
+	DM23: "White Lights" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
+	DM24: freedoom3.mid by Matias "jupiter_ex" Roldan
+
+	DM25: "Shoot 'em All" by rostuhan
+	DM26: dave3d09.mid by jute
+	DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
+	DM28: "Bobby Sent Me" by Ralph "Ralphis" Vickers
+	DM29: "SevenFour" by Ralph "Ralphis" Vickers
+	DM30: "Freedom for Your Shooting Skills" by rostuhan
+	DM31: "The Syntax of Time" by Kevin "Velvetic" Martins
+	DM32: "Bullet Hell" by rostuhan
+
+
+--Previously Featured in Freedoom 0.12.1--
+
+E1M1: e1m1.mid by Ralph "Ralphis" Vickers (moved to E1M5, not removed)
+E1M3: "Mortal" by Jeremy "Vandalorian" Emerson
+E1M5: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle (moved to demomap5, not removed)
+E1M6: dave3d35 by jute
+E1M7: "Sewers" by Discoholic, remix of "Wasteland Scavengers" by Samuel "Blastfrog" Oliver (moved to Map12, not removed)
+E1M9: "The Raging Sun" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
+E2M1: dave3d38.mid by jute
+E2M2: "Animal Skin" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
+E2M3: "Alone with Colors" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins (moved to E1M3, not removed)
+E2M5: "Music for Freedoom 1" by Jeremy "Vandalorian" Emerson
+E2M6: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle
+E2M7: "Music for Freedoom 3" by Jeremy "Vandalorian" Emerson
+E2M9: dave3d34.mid by jute
+E3M1: "Intrare In Infernum" by Lola "BlueWorrior" Harvey
+E3M9: "Lipstick" by Jeremy "Vandalorian" Emerson (moved to Map31, not removed)
+Phase 1 Title: "I Hate Fredrik Johansson" by Toby "Tobester" Collins Jr.
+Phase 1 Intermission: "Music for Freedoom 10" by Jeremy "Vandalorian" Emerson (moved to E2M3, not removed)
+Victory: "Ominous Theme" by Jared "BlackJar72" Blackburn (moved to demomap6, not removed)
+Bunny: "Look At The Bunnies" by RestlessRodent
+
+Map04: "Soviet Porno" by Jeremy "Vandalorian" Emerson (moved to Map10, not removed)
+Map07: "Riders of Hell" by Tyler "Picklehammer" P. (moved to DM05, not removed)
+Map10: "Death's Embrace" by Tyler "Picklehammer" P. (moved to demomap9, not removed)
+Map11: dave3d02.mid by jute
+Map12: Doom2Alt.mid by Bradley "BobFromReboot" Lavigne
+Map19: "Deceit" by Julian "Julian Hope" Aubourg
+Map20: dave3d05.mid by jute
+Map21: "Violence Culture" by Jeremy "Vandalorian" Emerson
+MAP22: "Mists Over the Mire" by Tyler "Picklehammer" P. (moved to demomap8, not removed)
+Map23: dave3d09.mid by jute
+Map26: "Crawl" by Jeremy "Vandalorian" Emerson
+Map29: freedoom.mid by Varis Alpha
+Map30: "Paranoia" by Tyler "Picklehammer" P. (moved to Map23, not removed)
+Map31: "The Machine" by Lola "BlueWorrior" Harvey (moved to Map32, not removed)
+Map32: "Black Mountain" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins (moved to Map26, not removed)
+Phase 2 + FreeDM Intro: "Warpath" by Tyler "Picklehammer" P. (moved to Map30, not removed)
+Phase 2 + FreeDM Intermission: "Burn the Bodies" by Tyler "Picklehammer" P. (moved to Map19, not removed)
+Phase 2 Story: dave3d07.mid by jute (moved to demomap2, not removed)
+
+DM03: "Music for Freedoom 2" by Jeremy "Vandalorian" Emerson
+DM05: Map01.mid by Ralph "Ralphis" Vickers
+DM06: "The Heroic Battle" by Tyler "Picklehammer" P. (moved to demomap4, not removed)
+DM07: dave3d30.mid by jute
+DM08: Dave3d13.mid by jute
+DM12: dave3d24.mid by jute
+DM13: e1m1.mid by Ralph "Ralphis" Vickers (now E1M1 exclusive, not removed)
+DM18: dave3d06.mid by jute
+DM19: dave3d27.mid by jute
+DM20: dave3d16.mid by jute
+DM21: dave3d12.mid by jute
+DM23: dave3d17.mid by jute
+DM25: dave3d20.mid by jute
+DM30: dave3d01.mid by jute
+DM32: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
